@@ -1,0 +1,300 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f5f7fa;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e4e8;
+  width: 100%;
+}
+
+.title {
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.description {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.searchBox {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.input {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px 0 0 5px;
+  width: 70%;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.weatherContainer {
+  background-color: white;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  width: 100%;
+  color: #333;
+}
+
+.cityInfo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.cityInfo h2 {
+  font-size: 28px;
+  color: #1e3a8a;
+  margin-bottom: 5px;
+}
+
+.weatherIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+  height: 100px;
+}
+
+.bikeIcon, .sunIcon {
+  width: 80px;
+  height: 80px;
+  font-size: 3rem;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+}
+
+.bikeIcon {
+  margin-right: 20px;
+  animation: bikeMove 8s infinite ease-in-out;
+}
+
+.sunIcon {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  animation: sunRotate 20s infinite linear;
+}
+
+@keyframes bikeMove {
+  0% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(-20px); }
+}
+
+@keyframes sunRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.dayForecast {
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dayTitle {
+  font-size: 24px;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #2563eb;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.day0 {
+  border-left: 5px solid #3b82f6; /* niebieski */
+}
+
+.day1 {
+  border-left: 5px solid #10b981; /* zielony */
+}
+
+.day2 {
+  border-left: 5px solid #f59e0b; /* pomarańczowy */
+}
+
+.hourlyForecast {
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.forecastTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.forecastTable th {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 15px;
+  font-weight: 500;
+}
+
+.forecastTable td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.clothesRecommendation {
+  background-color: #f0f9ff;
+  border-left: 4px solid #2563eb;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clothesRecommendation h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.clothesRecommendation p {
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+.clothesCategory {
+  margin-bottom: 15px;
+}
+
+.clothesCategory h4 {
+  color: #2563eb;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+}
+
+/* Style dla oznaczenia prędkości wiatru kolorami */
+.windLow {
+  color: #16a34a;
+  font-weight: bold;
+  background-color: rgba(22, 163, 74, 0.1);
+}
+
+.windMedium {
+  color: #2563eb;
+  font-weight: bold;
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.windHigh {
+  color: #dc2626;
+  font-weight: bold;
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+/* Style dla strzałek kierunku wiatru */
+.windArrow {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-right: 5px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+/* Style dla ikon pogodowych */
+.weatherIcon {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .searchBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .button {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .forecastTable {
+    font-size: 14px;
+  }
+  
+  .forecastTable th, .forecastTable td {
+    padding: 8px 10px;
+  }
+}

@@ -1,0 +1,28 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f5f7fa;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Wyłączamy ciemny motyw dla lepszej widoczności */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: #333;
+    background: #f5f7fa;
+  }
+}
